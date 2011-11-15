@@ -20,3 +20,7 @@ group :development, :test do
     gem 'ruby-debug19'
   end
 end
+
+group :test, :development do
+  gem "rspec-rails"
+end

@@ -43,6 +43,9 @@ GEM
       cucumber (>= 1.0)
     capybara-webkit (0.7.2)
       capybara (>= 1.0.0, < 1.2)
+    capybara_minitest_spec (0.2.1)
+      capybara
+      minitest (~> 2.0)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
     columnize (0.3.4)
@@ -72,6 +75,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    minitest (2.8.0)
     multi_json (1.0.3)
     nokogiri (1.5.0)
     polyglot (0.3.3)
@@ -149,8 +153,10 @@ DEPENDENCIES
   capybara
   capybara-screenshot (~> 0.1)
   capybara-webkit
+  capybara_minitest_spec
   cucumber
   cucumber-rails
+  minitest
   rails (~> 3.1)
   rspec
   rspec-rails

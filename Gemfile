@@ -24,3 +24,8 @@ end
 group :test, :development do
   gem "rspec-rails"
 end
+
+group :test do
+  gem 'minitest'          # At least v2.0.2 if using MiniShoulda.
+  gem 'capybara_minitest_spec' # capybara checks for mini test
+end

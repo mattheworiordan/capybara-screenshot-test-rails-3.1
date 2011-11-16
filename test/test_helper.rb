@@ -1,14 +1,14 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
-
-require 'minitest/autorun'
+require 'rails/test_help'
 require 'capybara/rails'
+require 'minitest/autorun'
 
-# If description name ends with 'integration', use this RequestSpec class.
-# It has all the integration test goodies.
-class RequestSpec < MiniTest::Spec
-  include Rails.application.routes.url_helpers
-  include Capybara::DSL
+module ActionDispatch
+  class IntegrationTest
+    include Capybara::DSL
+  end
 end
-MiniTest::Spec.register_spec_type /integration$/i, RequestSpec
+
+
 

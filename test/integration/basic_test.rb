@@ -1,37 +1,39 @@
 require 'test_helper'
 
-describe 'Mini test without Capybara' do
-  it "should pass" do
-    true.should == true
-  end
-  it "should fail and not invoke Capybara" do
-    true.should == false
-  end
-end
+class BasicTest < ActionDispatch::IntegrationTest
 
-describe 'Mini test with Capybara' do
-  it "simply returns the original HTML when viewed with Rack" do
-    puts "Running test 1"
+  before { Capybara.use_default_driver }
+
+  it "snapshots the HTML when viewed with Rack and there is a failure" do
     visit '/rack'
-    page.has_content?('Rack').must_be true
+    assert page.has_content?('Rack')
     click_link('Does not exist')
   end
 
-  it "generates HTML showing that Javascript under Selenium works" do
-    puts "Running test 2"
+  it "snapshots HTML whilst showing that Javascript under Selenium works" do
     Capybara.current_driver = :selenium
     visit '/selenium'
-    page.has_content?('Selenium supports Javascript').must_be true
+    assert page.has_content?('Selenium supports Javascript')
     click_link('Does not exist')
-    Capybara.use_default_driver
   end
 
-  it "generates HTML showing that Javascript under Capybara-webkit works" do
-    puts "Running test 3"
+  it "does not snapshot HTML or screen shot as all the tests pass" do
     Capybara.current_driver = :webkit
     visit '/webkit'
-    page.has_content?('Webkit supports Javascript').must_be true
-    click_link('Does not exist')
-    Capybara.use_default_driver
+    assert page.has_content?('Webkit supports Javascript')
   end
+
+  it "screenshots when an assertion fails" do
+    Capybara.current_driver = :webkit
+    visit '/webkit'
+    assert page.has_content?('Webkit Does Not Javascript')
+  end
+
+  it "screenshots when a capybara error happens" do
+    Capybara.current_driver = :webkit
+    visit '/webkit'
+    click_link('Does not exist')
+  end
+
 end
+

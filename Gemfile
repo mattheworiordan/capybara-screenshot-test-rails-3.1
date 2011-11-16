@@ -26,6 +26,6 @@ group :test, :development do
 end
 
 group :test do
-  gem 'minitest'          # At least v2.0.2 if using MiniShoulda.
-  gem 'capybara_minitest_spec' # capybara checks for mini test
+  gem 'minitest'
+  gem 'mini_specunit'
 end

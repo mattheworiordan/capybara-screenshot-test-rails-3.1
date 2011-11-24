@@ -3,6 +3,10 @@ Feature: Basic
   A visitor
   Should visit a page that does not exist
 
+  Scenario: View page with Rack without a screen shot being shown
+    Given I am on the Rack page
+    Then I should see the text "Rack"
+
   Scenario: View page with Rack
     Given I am on the Rack page
     Then I should see the text "Rack"

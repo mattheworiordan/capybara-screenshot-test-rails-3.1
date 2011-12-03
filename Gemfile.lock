@@ -38,7 +38,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    capybara-screenshot (0.1.6)
+    capybara-screenshot (0.1.7)
       capybara (>= 1.0)
       cucumber (>= 1.0)
     capybara-webkit (0.7.2)

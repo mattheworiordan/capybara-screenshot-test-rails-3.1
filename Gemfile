@@ -9,7 +9,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'capybara-screenshot', '~>0.1'
+  gem 'capybara-screenshot', '~>0.2.2'
   gem 'rspec'
 end
 
@@ -17,7 +17,7 @@ group :development, :test do
   if RUBY_VERSION =~ /^1\.8\.[\d]+$/
     gem 'ruby-debug'
   else
-    gem 'ruby-debug19'
+    gem 'debugger'
   end
 end
 

@@ -7,10 +7,11 @@ gem 'sqlite3'
 group :test do
   gem 'cucumber'
   gem 'cucumber-rails'
-  gem 'capybara'
-  gem 'capybara-webkit'
+  gem 'capybara', '1.1.2'
+  gem 'capybara-webkit', '0.12.1'
   gem 'capybara-screenshot', '~>0.2.2'
-  gem 'rspec'
+  gem 'rspec', '2.10.0'
+  gem 'rspec-rails'
 end
 
 group :development, :test do
@@ -19,13 +20,4 @@ group :development, :test do
   else
     gem 'debugger'
   end
-end
-
-group :test, :development do
-  gem "rspec-rails"
-end
-
-group :test do
-  gem 'minitest'
-  gem 'mini_specunit'
 end

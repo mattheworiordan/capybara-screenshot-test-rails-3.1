@@ -43,3 +43,24 @@ describe "The link content element" do
     end
   end
 end
+
+describe 'Nested screenshot potential issue', :type => :request, :js => true do
+  it "should take one screenshot (\e[33mexpect failure\e[0m)" do
+    visit '/'
+    raise
+  end
+
+  context "nest 1" do
+    it "should take one screenshot (\e[33mexpect failure\e[0m)" do
+      visit '/'
+      raise
+    end
+
+    context "nest 2" do
+      it "should take one screenshot (\e[33mexpect failure\e[0m)" do
+        visit '/'
+        raise
+      end
+    end
+  end
+end

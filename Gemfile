@@ -6,7 +6,7 @@ gem 'sqlite3'
 
 group :test do
   gem 'cucumber'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'capybara-screenshot', '~>0.2.2'
@@ -22,7 +22,7 @@ group :development, :test do
 end
 
 group :test, :development do
-  gem "rspec-rails"
+  gem 'rspec-rails'
 end
 
 group :test do

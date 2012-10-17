@@ -34,14 +34,12 @@ describe "The link content element" do
   it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
     visit '/webkit'
     page.should have_content('Webkit supports Javascript')
-    click_link('Does not exist')
   end
 
   context "Some context" do
     it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
       visit '/webkit'
       page.should have_content('Webkit supports Javascript')
-      click_link('Does not exist')
     end
   end
 end

@@ -9,7 +9,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'capybara-screenshot', '~>0.2.2'
   gem 'rspec'
 end
 
@@ -28,4 +27,8 @@ end
 group :test do
   gem 'minitest'
   gem 'mini_specunit'
+end
+
+group :test do
+  gem 'capybara-screenshot'
 end

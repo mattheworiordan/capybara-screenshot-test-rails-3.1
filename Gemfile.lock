@@ -38,8 +38,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    capybara-screenshot (0.2.2)
-      capybara (>= 1.0)
     capybara-webkit (0.12.1)
       capybara (>= 1.0.0, < 1.2)
       json
@@ -147,7 +145,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  capybara-screenshot (~> 0.2.2)
   capybara-webkit
   cucumber
   cucumber-rails

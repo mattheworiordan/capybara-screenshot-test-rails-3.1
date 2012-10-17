@@ -9,7 +9,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'capybara-screenshot', '~>0.2.2'
+  # gem 'capybara-screenshot', '~>0.2.2'
   gem 'rspec'
 end
 

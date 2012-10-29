@@ -16,35 +16,35 @@ describe "home page", :type => :request do
     click_link('Does not exist')
   end
 
-  it "generates HTML showing that Javascript under Selenium works (\e[33mexpect failure\e[0m)", :driver => :selenium do
-    visit '/selenium'
-    page.should have_content('Selenium supports Javascript')
-    click_link('Does not exist')
-  end
+  # it "generates HTML showing that Javascript under Selenium works (\e[33mexpect failure\e[0m)", :driver => :selenium do
+  #   visit '/selenium'
+  #   page.should have_content('Selenium supports Javascript')
+  #   click_link('Does not exist')
+  # end
 
-  it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
-    visit '/webkit'
-    page.should have_content('Webkit supports Javascript')
-    click_link('Does not exist')
-  end
+  # it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
+  #   visit '/webkit'
+  #   page.should have_content('Webkit supports Javascript')
+  #   click_link('Does not exist')
+  # end
 end
 
 describe "The link content element" do
   # replication of issue https://github.com/mattheworiordan/capybara-screenshot/issues/24
-  it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
-    visit '/webkit'
-    page.should have_content('Webkit supports Javascript')
-  end
+  # it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
+  #   visit '/webkit'
+  #   page.should have_content('Webkit supports Javascript')
+  # end
 
-  context "Some context" do
-    it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
-      visit '/webkit'
-      page.should have_content('Webkit supports Javascript')
-    end
-  end
+  # context "Some context" do
+  #   it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
+  #     visit '/webkit'
+  #     page.should have_content('Webkit supports Javascript')
+  #   end
+  # end
 end
 
-describe 'Nested screenshot potential issue', :type => :request, :js => true do
+describe 'Nested screenshot potential issue', :type => :request do #, :js => true do
   it "should take one screenshot (\e[33mexpect failure\e[0m)" do
     visit '/'
     raise

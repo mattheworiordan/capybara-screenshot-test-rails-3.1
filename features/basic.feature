@@ -18,8 +18,8 @@ Feature: Basic
     Then I should see the text "Selenium supports Javascript"
     When I follow "link does not exist"
 
-  @javascript
-  Scenario: View page with Webkit
-    Given I am on the Webkit page
-    Then I should see the text "Webkit supports Javascript"
-    When I follow "link does not exist"
+  # @javascript
+  # Scenario: View page with Webkit
+  #   Given I am on the Webkit page
+  #   Then I should see the text "Webkit supports Javascript"
+  #   When I follow "link does not exist"

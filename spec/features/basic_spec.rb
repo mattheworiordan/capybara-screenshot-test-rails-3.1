@@ -9,7 +9,7 @@ describe "a spec not using Capybara" do
   end
 end
 
-describe "home page", :type => :request do
+describe "home page" do
   it "simply returns the original HTML when viewed with Rack (\e[33mexpect failure\e[0m)" do
     visit '/rack'
     page.should have_content('Rack')
@@ -22,29 +22,29 @@ describe "home page", :type => :request do
     click_link('Does not exist')
   end
 
-  it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
-    visit '/webkit'
-    page.should have_content('Webkit supports Javascript')
-    click_link('Does not exist')
-  end
+  # it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
+  #   visit '/webkit'
+  #   page.should have_content('Webkit supports Javascript')
+  #   click_link('Does not exist')
+  # end
 end
 
 describe "The link content element" do
   # replication of issue https://github.com/mattheworiordan/capybara-screenshot/issues/24
-  it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
+  it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :driver => :selenium do
     visit '/webkit'
     page.should have_content('Webkit supports Javascript')
   end
 
   context "Some context" do
-    it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :js => true do
+    it "generates HTML showing that Javascript under Capybara-webkit works (\e[32mexpect success\e[0m)", :driver => :selenium do
       visit '/webkit'
       page.should have_content('Webkit supports Javascript')
     end
   end
 end
 
-describe 'Nested screenshot potential issue', :type => :request, :js => true do
+describe 'Nested screenshot potential issue', :driver => :selenium do
   it "should take one screenshot (\e[33mexpect failure\e[0m)" do
     visit '/'
     raise

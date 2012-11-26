@@ -7,8 +7,9 @@ gem 'sqlite3'
 group :test do
   gem 'cucumber'
   gem 'cucumber-rails', :require => false
-  gem 'capybara'
-  gem 'capybara-webkit'
+  gem 'capybara', '>=2.0'
+  # gem 'capybara-webkit' # no support for Capybara 2 yet
+  # gem 'poltergeist' # use poltergeist instead
   gem 'rspec'
 end
 
@@ -30,5 +31,5 @@ group :test do
 end
 
 group :test do
-  gem 'capybara-screenshot'
+  gem 'capybara-screenshot', :path => '../gem'
 end

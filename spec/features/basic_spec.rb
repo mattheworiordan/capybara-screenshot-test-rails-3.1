@@ -46,19 +46,19 @@ end
 
 describe 'Nested screenshot potential issue', :driver => :selenium do
   it "should take one screenshot (\e[33mexpect failure\e[0m)" do
-    visit '/'
+    visit '/nested-test'
     raise
   end
 
   context "nest 1" do
     it "should take one screenshot (\e[33mexpect failure\e[0m)" do
-      visit '/'
+      visit '/nested-test'
       raise
     end
 
     context "nest 2" do
       it "should take one screenshot (\e[33mexpect failure\e[0m)" do
-        visit '/'
+        visit '/nested-test'
         raise
       end
     end

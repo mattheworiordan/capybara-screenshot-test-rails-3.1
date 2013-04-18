@@ -45,7 +45,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-screenshot (0.3.6)
+    capybara-screenshot (0.3.7)
       capybara (>= 1.0, < 3)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)

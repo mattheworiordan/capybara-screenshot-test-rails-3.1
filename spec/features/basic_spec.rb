@@ -22,11 +22,11 @@ describe "home page" do
     click_link('Does not exist')
   end
 
-  # it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
-  #   visit '/webkit'
-  #   page.should have_content('Webkit supports Javascript')
-  #   click_link('Does not exist')
-  # end
+  it "generates HTML showing that Javascript under Capybara-webkit works (\e[33mexpect failure\e[0m)", :js => true do
+    visit '/webkit'
+    page.should have_content('Webkit supports Javascript')
+    click_link('Does not exist')
+  end
 end
 
 describe "The link content element" do

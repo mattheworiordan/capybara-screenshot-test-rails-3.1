@@ -8,8 +8,9 @@ group :test do
   gem 'cucumber'
   gem 'cucumber-rails', :require => false
   gem 'capybara', '>=2.0'
-  # gem 'capybara-webkit' # no support for Capybara 2 yet
+  gem 'capybara-webkit', github: 'thoughtbot/capybara-webkit', branch: 'master'
   # gem 'poltergeist' # use poltergeist instead
+  gem 'selenium-webdriver'
   gem 'rspec'
 end
 
@@ -23,6 +24,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
 group :test do
@@ -31,5 +33,5 @@ group :test do
 end
 
 group :test do
-  gem 'capybara-screenshot', :path => '../gem'
+  gem 'capybara-screenshot' #, :path => '../gem'
 end

@@ -15,11 +15,8 @@ group :test do
 end
 
 group :development, :test do
-  if RUBY_VERSION =~ /^1\.8\.[\d]+$/
-    gem 'ruby-debug'
-  else
-    gem 'debugger'
-  end
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test, :development do

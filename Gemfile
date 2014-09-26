@@ -11,7 +11,7 @@ group :test do
   gem 'capybara-webkit', github: 'thoughtbot/capybara-webkit', branch: 'master'
   # gem 'poltergeist' # use poltergeist instead
   gem 'selenium-webdriver'
-  gem 'rspec'
+  gem 'rspec', '>=3.1'
 end
 
 group :development, :test do
@@ -20,7 +20,7 @@ group :development, :test do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>=3.1'
   gem 'database_cleaner'
 end
 

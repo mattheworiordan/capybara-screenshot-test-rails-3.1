@@ -1,10 +1,10 @@
 GIT
-  remote: git://github.com/thoughtbot/capybara-webkit.git
-  revision: 0abc7e139f902e2ca1fcd2c145f688bb321f5cbe
+  remote: https://github.com/thoughtbot/capybara-webkit.git
+  revision: f429d668568ff7349f5e23a085df7fcf1c431fa7
   branch: master
   specs:
-    capybara-webkit (0.14.1)
-      capybara (~> 2.0, >= 2.0.2)
+    capybara-webkit (1.15.1)
+      capybara (>= 2.3, < 4.0)
       json
 
 GEM
@@ -161,7 +161,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
+    tzinfo (0.3.61)
     websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)

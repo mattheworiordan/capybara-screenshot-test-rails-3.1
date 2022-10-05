@@ -1,10 +1,10 @@
 GIT
-  remote: git://github.com/thoughtbot/capybara-webkit.git
-  revision: 0abc7e139f902e2ca1fcd2c145f688bb321f5cbe
+  remote: https://github.com/thoughtbot/capybara-webkit.git
+  revision: f429d668568ff7349f5e23a085df7fcf1c431fa7
   branch: master
   specs:
-    capybara-webkit (0.14.1)
-      capybara (~> 2.0, >= 2.0.2)
+    capybara-webkit (1.15.1)
+      capybara (>= 2.3, < 4.0)
       json
 
 GEM
@@ -37,7 +37,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    addressable (2.3.6)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     arel (3.0.2)
     builder (3.0.4)
     byebug (3.4.0)
@@ -103,6 +104,7 @@ GEM
     pry-byebug (2.0.0)
       byebug (~> 3.4)
       pry (~> 0.10)
+    public_suffix (5.0.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
